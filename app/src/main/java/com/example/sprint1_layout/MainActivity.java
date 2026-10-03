@@ -1,26 +1,68 @@
 package com.example.sprint1_layout;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
+
+        // Cargamos la pantalla inicial
         setContentView(R.layout.activity_main);
 
-        // Se utiliza android.R.id.content para usar la vista raíz predeterminada del sistema
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(android.R.id.content), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
+        // Buscamos los elementos de la pantalla
+        ImageView imgLogo = findViewById(R.id.imgLogo);
+        TextView txtBienvenida = findViewById(R.id.txtBienvenida);
+        TextView txtSubtitulo = findViewById(R.id.txtSubtitulo);
+        Button btnContinuar = findViewById(R.id.btnContinuar);
+
+        // Cargamos las animaciones
+        Animation fadeIn = AnimationUtils.loadAnimation(
+                this,
+                R.anim.fade_in
+        );
+
+        Animation slideUp = AnimationUtils.loadAnimation(
+                this,
+                R.anim.slide_up
+        );
+
+        Animation scaleIn = AnimationUtils.loadAnimation(
+                this,
+                R.anim.scale_in
+        );
+
+        // El logo aparece primero
+        imgLogo.startAnimation(fadeIn);
+
+        // El titulo aparece subiendo
+        txtBienvenida.startAnimation(slideUp);
+
+        // El subtitulo aparece subiendo
+        txtSubtitulo.startAnimation(slideUp);
+
+        // El boton aparece con escala
+        btnContinuar.startAnimation(scaleIn);
+
+        // Cuando pulsamos ENTRAR...
+        btnContinuar.setOnClickListener(v -> {
+
+            // Abrimos la pantalla de seleccion
+            Intent intent = new Intent(
+                    MainActivity.this,
+                    DeportesActivity.class
+            );
+
+            startActivity(intent);
         });
     }
 }

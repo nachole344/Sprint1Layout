@@ -1,4 +1,4 @@
-package com.example.ishowspeed;
+package com.example.sprint1_layout;
 
 import android.os.Bundle;
 

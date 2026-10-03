@@ -1,4 +1,4 @@
-package com.example.ishowspeed;
+package com.example.sprint1_layout;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,7 +13,7 @@ public class F1Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         // Cargamos el XML de la pantalla F1
-        setContentView(R.layout.activity_f1);
+        setContentView(R.layout.f1_home);
 
         // Buscamos la tarjeta de PILOTOS
         LinearLayout cardPilotos = findViewById(R.id.cardPilotos);
@@ -39,7 +39,7 @@ public class F1Activity extends AppCompatActivity {
             // Abrimos la pantalla de clasificacion
             Intent intent = new Intent(
                     F1Activity.this,
-                    ClasificacionF1Activity.class
+                    com.example.sprint1_layout.ClasificacionF1Activity.class
             );
 
             startActivity(intent);
@@ -54,7 +54,7 @@ public class F1Activity extends AppCompatActivity {
             // Abrimos la pantalla del calendario
             Intent intent = new Intent(
                     F1Activity.this,
-                    CalendarioF1Activity.class
+                    com.example.sprint1_layout.CalendarioF1Activity.class
             );
 
             startActivity(intent);
