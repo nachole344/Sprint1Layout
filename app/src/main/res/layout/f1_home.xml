@@ -4,7 +4,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#0B0B0F">
+    android:background="#0B0B0F"
+    android:fillViewport="true">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -12,85 +13,137 @@
         android:orientation="vertical"
         android:padding="20dp">
 
+        <!-- ========================= -->
         <!-- CABECERA -->
+        <!-- ========================= -->
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="60dp"
             android:gravity="center_vertical"
             android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/ishowspeed_logo"
+                android:contentDescription="I Show Speed"/>
 
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
                 android:layout_weight="1"
-                android:text="I SHOW SPEED"
+                android:text="ISHOWSPEED"
                 android:textColor="#FFFFFF"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 android:textStyle="bold" />
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:gravity="center"
                 android:text="☰"
                 android:textColor="#FFFFFF"
-                android:textSize="28sp" />
+                android:textSize="25sp"
+                android:background="@drawable/circle_button"/>
 
         </LinearLayout>
 
 
+        <!-- ========================= -->
         <!-- TITULO -->
+        <!-- ========================= -->
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="35dp"
+            android:layout_marginTop="28dp"
             android:text="FORMULA 1"
             android:textColor="#FFFFFF"
             android:textSize="34sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
             android:text="THE WORLD OF SPEED"
-            android:textColor="#AAAAAA"
+            android:textColor="#88888F"
             android:textSize="13sp"
-            android:letterSpacing="0.15" />
+            android:letterSpacing="0.15"/>
 
 
+        <!-- ========================= -->
         <!-- TARJETA PRINCIPAL -->
+        <!-- ========================= -->
 
-        <LinearLayout
+        <FrameLayout
+            android:id="@+id/cardPrincipalF1"
             android:layout_width="match_parent"
-            android:layout_height="220dp"
+            android:layout_height="240dp"
             android:layout_marginTop="25dp"
-            android:background="#19191F"
-            android:gravity="bottom"
-            android:orientation="vertical"
-            android:padding="20dp">
+            android:background="@drawable/f1_home"
+            android:clickable="true"
+            android:clipToOutline="true"
+            android:focusable="true">
+
+            <!-- IMAGEN -->
+
+            <!-- DEGRADADO -->
+
+            <!-- TEXTO -->
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/card_gradient" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="FORMULA 1"
+                    android:textColor="#FFFFFF"
+                    android:textSize="28sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="2026 SEASON"
+                    android:textColor="#DDDDDD"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <!-- FLECHA -->
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="FORMULA 1"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_gravity="top|end"
+                android:layout_margin="15dp"
+                android:background="@drawable/circle_button"
+                android:gravity="center|top"
+                android:text="→"
                 android:textColor="#FFFFFF"
-                android:textSize="26sp"
+                android:textSize="25sp"
                 android:textStyle="bold" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:text="2026 SEASON"
-                android:textColor="#AAAAAA"
-                android:textSize="14sp" />
-
-        </LinearLayout>
+        </FrameLayout>
 
 
+        <!-- ========================= -->
         <!-- EXPLORE -->
+        <!-- ========================= -->
 
         <TextView
             android:layout_width="wrap_content"
@@ -99,10 +152,12 @@
             android:text="EXPLORE"
             android:textColor="#FFFFFF"
             android:textSize="20sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"/>
 
 
-        <!-- FILA DE BOTONES -->
+        <!-- ========================= -->
+        <!-- PILOTOS + CLASIFICACION -->
+        <!-- ========================= -->
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -112,111 +167,154 @@
 
             <!-- PILOTOS -->
 
-            <LinearLayout
+            <FrameLayout
                 android:id="@+id/cardPilotos"
                 android:layout_width="0dp"
-                android:layout_height="150dp"
+                android:layout_height="165dp"
                 android:layout_marginEnd="8dp"
                 android:layout_weight="1"
-                android:background="#19191F"
-                android:gravity="center"
-                android:orientation="vertical">
+                android:background="@drawable/card_deporte"
+                android:clickable="true"
+                android:focusable="true">
 
-                <TextView
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="🏎️"
-                    android:textSize="35sp" />
+                    android:layout_gravity="bottom"
+                    android:orientation="vertical"
+                    android:padding="15dp">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:text="PILOTOS"
-                    android:textColor="#FFFFFF"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="PILOTOS"
+                        android:textColor="#FFFFFF"
+                        android:textSize="17sp"
+                        android:textStyle="bold"/>
 
-            </LinearLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ver parrilla"
+                        android:textColor="#AAAAAA"
+                        android:textSize="12sp"
+                        android:layout_marginTop="3dp"/>
+
+                </LinearLayout>
+
+            </FrameLayout>
 
 
             <!-- CLASIFICACION -->
 
-            <LinearLayout
+            <FrameLayout
                 android:id="@+id/cardClasificacion"
                 android:layout_width="0dp"
-                android:layout_height="150dp"
+                android:layout_height="165dp"
                 android:layout_marginStart="8dp"
                 android:layout_weight="1"
-                android:background="#19191F"
-                android:gravity="center"
-                android:orientation="vertical">
+                android:background="@drawable/card_deporte"
+                android:clickable="true"
+                android:focusable="true">
 
-                <TextView
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="🏆"
-                    android:textSize="35sp" />
+                    android:layout_gravity="bottom"
+                    android:orientation="vertical"
+                    android:padding="15dp">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:text="CLASIFICACION"
-                    android:textColor="#FFFFFF"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
+                    <TextView
+                        android:layout_width="136dp"
+                        android:layout_height="wrap_content"
+                        android:text="CLASIFICACIÓN"
+                        android:textColor="#FFFFFF"
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
 
-            </LinearLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Top pilotos"
+                        android:textColor="#AAAAAA"
+                        android:textSize="12sp"
+                        android:layout_marginTop="3dp"/>
+
+                </LinearLayout>
+
+            </FrameLayout>
 
         </LinearLayout>
 
 
+        <!-- ========================= -->
         <!-- CALENDARIO -->
+        <!-- ========================= -->
 
-        <LinearLayout
+        <FrameLayout
             android:id="@+id/cardCalendario"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="105dp"
             android:layout_marginTop="16dp"
-            android:layout_marginBottom="30dp"
-            android:background="#19191F"
-            android:gravity="center_vertical"
-            android:orientation="horizontal"
-            android:padding="20dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="🗓️"
-                android:textSize="30sp" />
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/card_deporte"
+            android:clickable="true"
+            android:focusable="true">
 
             <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="18dp"
-                android:orientation="vertical">
+                android:layout_width="350dp"
+                android:layout_height="76dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="10dp">
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="CALENDARIO"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/circle_button"
+                    android:gravity="center"
+                    android:text="🏁"
+                    android:textSize="27sp" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="CALENDARIO"
+                        android:textColor="#FFFFFF"
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="2026 SEASON"
+                        android:textColor="#88888F"
+                        android:textSize="13sp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:gravity="center|top"
+                    android:text="→"
                     android:textColor="#FFFFFF"
-                    android:textSize="17sp"
+                    android:textSize="23sp"
                     android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:text="2026 SEASON"
-                    android:textColor="#AAAAAA"
-                    android:textSize="13sp" />
 
             </LinearLayout>
 
-        </LinearLayout>
+        </FrameLayout>
 
     </LinearLayout>
 
 </ScrollView>
+

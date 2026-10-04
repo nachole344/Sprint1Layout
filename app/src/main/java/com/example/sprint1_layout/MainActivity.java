@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
                 R.anim.scale_in
         );
 
-        // El logo aparece primero
+        // El ishowspeed_logo aparece primero
         imgLogo.startAnimation(fadeIn);
 
         // El titulo aparece subiendo

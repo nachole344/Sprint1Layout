@@ -13,7 +13,7 @@
         android:id="@+id/imgLogo"
         android:layout_width="65dp"
         android:layout_height="65dp"
-        android:src="@drawable/logo"
+        android:src="@drawable/ishowspeed_logo"
         android:contentDescription="Logo I Show Speed"
         android:layout_gravity="start"
         android:layout_marginTop="15dp"/>
