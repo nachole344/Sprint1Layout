@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
                 R.anim.scale_in
         );
 
-        // El ishowspeed_logo aparece primero
+        // El logo aparece primero
         imgLogo.startAnimation(fadeIn);
 
         // El titulo aparece subiendo
@@ -50,13 +50,11 @@ public class MainActivity extends AppCompatActivity {
         // El subtitulo aparece subiendo
         txtSubtitulo.startAnimation(slideUp);
 
-        // El boton aparece con escala
+        // El boton aparece con una animacion de escala
         btnContinuar.startAnimation(scaleIn);
 
-        // Cuando pulsamos ENTRAR...
+        // Cuando pulsamos ENTRAR, abrimos la seleccion de deportes
         btnContinuar.setOnClickListener(v -> {
-
-            // Abrimos la pantalla de seleccion
             Intent intent = new Intent(
                     MainActivity.this,
                     DeportesActivity.class
