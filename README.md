@@ -52,3 +52,9 @@ El proyecto sigue la estructura habitual de una aplicación Android:
 - Mejorar la visualización del calendario de carreras.
 - Incorporar datos actualizados de las competiciones.
 - Añadir nuevas funcionalidades y mejoras de diseño.
+
+
+## Integrantes
+
+- Ignacio Andrés Leal Escarate
+- Nuria Font Sanchez
