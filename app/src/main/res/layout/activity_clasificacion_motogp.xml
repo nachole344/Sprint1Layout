@@ -87,7 +87,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="2"
-                    android:textColor="#AAAAAA"
+                    android:textColor="#848482"
                     android:textSize="35sp"
                     android:textStyle="bold" />
 
@@ -151,7 +151,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="1"
-                    android:textColor="#FFFFFF"
+                    android:textColor="#EFB810"
                     android:textSize="45sp"
                     android:textStyle="bold" />
 
@@ -215,7 +215,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="3"
-                    android:textColor="#AAAAAA"
+                    android:textColor="#B87333"
                     android:textSize="35sp"
                     android:textStyle="bold" />
 
