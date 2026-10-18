@@ -1,19 +1,113 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:orientation="vertical"
+    android:background="#0B0B0F"
+    android:padding="25dp">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <!-- LOGO SUPERIOR -->
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:src="@drawable/ishowspeed_logo"
+        android:contentDescription="Logo I Show Speed"
+        android:scaleType="fitCenter"
+        android:layout_gravity="start"
+        android:layout_marginTop="15dp" />
+
+    <!-- CONTENIDO CENTRAL -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="10dp">
+
+        <!-- DETALLE ROJO -->
+
+        <View
+            android:layout_width="55dp"
+            android:layout_height="5dp"
+            android:background="#E10600"
+            android:layout_marginBottom="25dp" />
+
+        <!-- TITULO -->
+
+        <TextView
+            android:id="@+id/txtBienvenida"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="I SHOW SPEED"
+            android:textColor="#FFFFFF"
+            android:textSize="34sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.04"
+            android:gravity="center"
+            android:fontFamily="sans-serif-black" />
+
+        <!-- SUBTITULO -->
+
+        <TextView
+            android:id="@+id/txtSubtitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TU MUNDO DEL MOTOR"
+            android:textColor="#E10600"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.16"
+            android:gravity="center"
+            android:layout_marginTop="12dp" />
+
+        <!-- DESCRIPCION -->
+
+        <TextView
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:text="Vive cada carrera. Sigue a tus pilotos favoritos. No te pierdas nada."
+            android:textColor="#A1A1AA"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:lineSpacingExtra="6dp"
+            android:layout_marginTop="22dp"
+            android:layout_marginBottom="38dp" />
+
+        <!-- BOTON ENTRAR -->
+
+        <Button
+            android:id="@+id/btnContinuar"
+            android:layout_width="240dp"
+            android:layout_height="60dp"
+            android:text="ENTRAR  →"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:letterSpacing="0.08"
+            android:background="@drawable/button_main"
+            android:backgroundTint="@null"
+            android:elevation="6dp"
+            android:stateListAnimator="@null" />
+
+        <!-- TEXTO INFERIOR -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="FORMULA 1  •  MOTOGP"
+            android:textColor="#666670"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.12"
+            android:gravity="center"
+            android:layout_marginTop="28dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

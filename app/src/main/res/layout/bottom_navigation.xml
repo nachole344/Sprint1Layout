@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:background="#111111"
+    android:elevation="8dp"
+    android:paddingStart="8dp"
+    android:paddingEnd="8dp">
+
+    <!-- INICIO / HOME -->
+    <ImageButton
+        android:id="@+id/nav_home"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_home"
+        android:scaleType="centerInside"
+        android:padding="18dp"
+        android:contentDescription="Inicio" />
+
+    <!-- PILOTOS -->
+    <ImageButton
+        android:id="@+id/nav_pilotos"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_pilotos"
+        android:scaleType="centerInside"
+        android:padding="18dp"
+        android:contentDescription="Pilotos" />
+
+    <!-- + CENTRAL -->
+    <ImageButton
+        android:id="@+id/nav_add"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_add"
+        android:scaleType="centerInside"
+        android:padding="14dp"
+        android:contentDescription="Añadir" />
+
+    <!-- CLASIFICACIÓN -->
+    <ImageButton
+        android:id="@+id/nav_clasificacion"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_clasificacion"
+        android:scaleType="centerInside"
+        android:padding="18dp"
+        android:contentDescription="Clasificación" />
+
+    <!-- MOTOGP -->
+    <ImageButton
+        android:id="@+id/nav_motogp"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_motogp"
+        android:scaleType="centerInside"
+        android:padding="14dp"
+        android:contentDescription="MotoGP" />
+
+</LinearLayout>
