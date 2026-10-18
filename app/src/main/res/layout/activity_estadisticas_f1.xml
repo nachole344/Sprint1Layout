@@ -12,6 +12,22 @@
         android:orientation="vertical"
         android:padding="20dp">
 
+        <!-- BOTON VOLVER ATRAS -->
+
+        <TextView
+            android:id="@+id/btnBack"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:gravity="center"
+            android:text="‹"
+            android:textColor="#FFFFFF"
+            android:textSize="35sp"
+            android:clickable="true"
+            android:focusable="true"
+            android:contentDescription="Volver al inicio" />
+
+        <!-- TITULO -->
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -28,6 +44,8 @@
             android:textSize="13sp"
             android:layout_marginTop="4dp"
             android:layout_marginBottom="25dp" />
+
+        <!-- PRIMERA FILA DE ESTADISTICAS -->
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -89,6 +107,8 @@
 
         </LinearLayout>
 
+        <!-- SEGUNDA FILA DE ESTADISTICAS -->
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -149,6 +169,8 @@
             </LinearLayout>
 
         </LinearLayout>
+
+        <!-- PILOTO DESTACADO -->
 
         <TextView
             android:layout_width="wrap_content"

@@ -31,7 +31,10 @@
                 android:gravity="center"
                 android:text="‹"
                 android:textColor="#FFFFFF"
-                android:textSize="35sp" />
+                android:textSize="35sp"
+                android:clickable="true"
+                android:focusable="true"
+                android:contentDescription="Volver al inicio" />
 
             <TextView
                 android:layout_width="wrap_content"
