@@ -2,8 +2,6 @@ package com.example.sprint1_layout;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.FrameLayout;
-import android.widget.LinearLayout;
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -15,25 +13,34 @@ public class MotoGPActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.motogp_home);
 
-        // Tarjeta de PILOTOS
-        FrameLayout cardPilotosMGP = findViewById(R.id.cardPilotosMGP);
-        cardPilotosMGP.setOnClickListener(v -> {
-            Intent intent = new Intent(MotoGPActivity.this, PilotosMotoGPActivity.class);
-            startActivity(intent);
-        });
+        // Boton de inicio (nav)
+        findViewById(R.id.nav_home).setOnClickListener(v ->
+                startActivity(new Intent(this, MotoGPActivity.class)));
 
-        // Tarjeta de CLASIFICACIÓN
-        FrameLayout cardClasificacion = findViewById(R.id.cardClasificacion);
-        cardClasificacion.setOnClickListener(v -> {
-            Intent intent = new Intent(MotoGPActivity.this, ClasificacionMotoGPActivity.class);
-            startActivity(intent);
-        });
+        // Boton de pilotos (pantalla principal)
+        findViewById(R.id.menuPilotos).setOnClickListener(v ->
+                startActivity(new Intent(this, PilotosMotoGPActivity.class)));
 
-        // Tarjeta de CALENDARIO
-        FrameLayout cardCalendario = findViewById(R.id.cardCalendario);
-        cardCalendario.setOnClickListener(v -> {
-            Intent intent = new Intent(MotoGPActivity.this, CalendarioMotoGPActivity.class);
-            startActivity(intent);
-        });
+        // Boton de pilotos (nav)
+        findViewById(R.id.nav_pilotos).setOnClickListener(v ->
+                startActivity(new Intent(this, PilotosMotoGPActivity.class)));
+
+        // Boton de clasificación
+        findViewById(R.id.menuClasificacion).setOnClickListener(v ->
+                startActivity(new Intent(this, ClasificacionMotoGPActivity.class)));
+
+        // Boton de clasificación (nav)
+        findViewById(R.id.nav_clasificacion).setOnClickListener(v ->
+                startActivity(new Intent(this, ClasificacionMotoGPActivity.class)));
+
+        // Boton de calendario
+        findViewById(R.id.homeCalendario).setOnClickListener(v ->
+                startActivity(new Intent(this, CalendarioMotoGPActivity.class)));
+
+        // Boton de F1
+        findViewById(R.id.nav_f1).setOnClickListener(v ->
+                startActivity(new Intent(this, F1Activity.class)));
+
+
     }
 }

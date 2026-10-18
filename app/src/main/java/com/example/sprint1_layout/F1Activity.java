@@ -15,49 +15,6 @@ public class F1Activity extends AppCompatActivity {
         // Cargamos el XML de la pantalla F1
         setContentView(R.layout.f1_home);
 
-        // Buscamos la tarjeta de PILOTOS
-        LinearLayout cardPilotos = findViewById(R.id.cardPilotos);
-
-        // Cuando pulsemos la tarjeta de pilotos...
-        cardPilotos.setOnClickListener(v -> {
-
-            // Abrimos la pantalla PilotosF1Activity
-            Intent intent = new Intent(
-                    F1Activity.this,
-                    PilotosF1Activity.class
-            );
-
-            startActivity(intent);
-        });
-
-        // Buscamos la tarjeta de CLASIFICACION
-        LinearLayout cardClasificacion = findViewById(R.id.cardClasificacion);
-
-        // Cuando pulsemos la tarjeta...
-        cardClasificacion.setOnClickListener(v -> {
-
-            // Abrimos la pantalla de clasificacion
-            Intent intent = new Intent(
-                    F1Activity.this,
-                    com.example.sprint1_layout.ClasificacionF1Activity.class
-            );
-
-            startActivity(intent);
-        });
-
-        // Buscamos la tarjeta de CALENDARIO
-        LinearLayout cardCalendario = findViewById(R.id.cardCalendario);
-
-        // Cuando pulsemos la tarjeta...
-        cardCalendario.setOnClickListener(v -> {
-
-            // Abrimos la pantalla del calendario
-            Intent intent = new Intent(
-                    F1Activity.this,
-                    com.example.sprint1_layout.CalendarioF1Activity.class
-            );
-
-            startActivity(intent);
-        });
+        //Se ha eliminado el funcionamiento de esta actividad para probar los cambios en MotoGP
     }
 }

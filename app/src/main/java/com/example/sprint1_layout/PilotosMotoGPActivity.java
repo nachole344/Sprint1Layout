@@ -12,5 +12,7 @@ public class PilotosMotoGPActivity extends AppCompatActivity {
         // Se carga el Layout de la lista de pilotos (MotoGP)
         setContentView(R.layout.activity_pilotos_motogp);
 
+        // Boton de volver
+        findViewById(R.id.btnBack).setOnClickListener(v -> finish());
     }
 }

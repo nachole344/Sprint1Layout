@@ -1,320 +1,769 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#0B0B0F"
-    android:fillViewport="true">
+    android:orientation="vertical">
 
-    <LinearLayout
+    <!-- ================================= -->
+    <!-- CONTENIDO SCROLLEABLE -->
+    <!-- ================================= -->
+
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="20dp">
-
-        <!-- ========================= -->
-        <!-- CABECERA -->
-        <!-- ========================= -->
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#0B0B0F"
+        android:fillViewport="true">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:src="@drawable/ishowspeed_logo"
-                android:contentDescription="I Show Speed"/>
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="12dp"
-                android:layout_weight="1"
-                android:text="ISHOWSPEED"
-                android:textColor="#FFFFFF"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:layout_width="45dp"
-                android:layout_height="45dp"
-                android:gravity="center"
-                android:text="☰"
-                android:textColor="#FFFFFF"
-                android:textSize="25sp"
-                android:background="@drawable/circle_button"/>
-
-        </LinearLayout>
-
-
-        <!-- ========================= -->
-        <!-- TITULO -->
-        <!-- ========================= -->
-
-        <TextView
-            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="28dp"
-            android:text="MOTO GP"
-            android:textColor="#FFFFFF"
-            android:textSize="34sp"
-            android:textStyle="bold"/>
+            android:background="#0B0B0F"
+            android:orientation="vertical"
+            android:paddingStart="18dp"
+            android:paddingTop="24dp"
+            android:paddingEnd="18dp"
+            android:paddingBottom="30dp">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:text="THE WORLD OF SPEED"
-            android:textColor="#88888F"
-            android:textSize="13sp"
-            android:letterSpacing="0.15"/>
-
-
-        <!-- ========================= -->
-        <!-- TARJETA PRINCIPAL -->
-        <!-- ========================= -->
-
-        <FrameLayout
-            android:id="@+id/cardPrincipalMGP"
-            android:layout_width="match_parent"
-            android:layout_height="240dp"
-            android:layout_marginTop="25dp"
-            android:background="@drawable/motogp_home"
-            android:clickable="true"
-            android:clipToOutline="true"
-            android:focusable="true">
-
-            <!-- IMAGEN -->
-
-            <!-- DEGRADADO -->
-
-            <!-- TEXTO -->
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/card_gradient"/>
+            <!-- ================================= -->
+            <!-- CABECERA -->
+            <!-- ================================= -->
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
-                android:orientation="vertical"
-                android:padding="20dp">
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="MOTO GP"
-                    android:textColor="#FFFFFF"
-                    android:textSize="28sp"
-                    android:textStyle="bold" />
+                <!-- LOGO -->
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:text="2026 SEASON"
-                    android:textColor="#DDDDDD"
-                    android:textSize="14sp" />
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:contentDescription="Logo I Show Speed"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ishowspeed_logo" />
+
+                <!-- ESPACIO -->
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1" />
+
+                <!-- BOTÓN NOTIFICACIONES -->
+
+                <FrameLayout
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/circle_menu">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:contentDescription="Notificaciones"
+                        android:src="@drawable/ic_noti" />
+
+                </FrameLayout>
 
             </LinearLayout>
 
-            <!-- FLECHA -->
 
-            <TextView
-                android:layout_width="45dp"
-                android:layout_height="45dp"
-                android:layout_gravity="top|end"
-                android:layout_margin="15dp"
-                android:background="@drawable/circle_button"
-                android:gravity="center|top"
-                android:text="→"
-                android:textColor="#FFFFFF"
-                android:textSize="25sp"
-                android:textStyle="bold" />
-
-        </FrameLayout>
-
-
-        <!-- ========================= -->
-        <!-- EXPLORE -->
-        <!-- ========================= -->
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:text="EXPLORE"
-            android:textColor="#FFFFFF"
-            android:textSize="20sp"
-            android:textStyle="bold"/>
-
-
-        <!-- ========================= -->
-        <!-- PILOTOS + CLASIFICACION -->
-        <!-- ========================= -->
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:orientation="horizontal">
-
-            <!-- PILOTOS -->
+            <!-- ================================= -->
+            <!-- CARTA PRINCIPAL DEL PILOTO -->
+            <!-- ================================= -->
 
             <FrameLayout
-                android:id="@+id/cardPilotosMGP"
-                android:layout_width="0dp"
-                android:layout_height="165dp"
-                android:layout_marginEnd="8dp"
-                android:layout_weight="1"
-                android:background="@drawable/card_deporte"
-                android:clickable="true"
-                android:focusable="true">
+                android:id="@+id/cardPilotoPrincipal"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="24dp"
+                android:background="@drawable/card_home_motogp"
+                android:clipToOutline="true"
+                android:elevation="6dp">
+
+                <!-- FOTO DEL PILOTO -->
+
+                <ImageView
+                    android:id="@+id/imgPilotoPrincipal"
+                    android:layout_width="218dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="end"
+                    android:contentDescription="Marc Marquez"
+                    android:scaleType="fitEnd"
+                    android:src="@drawable/marc_marquez_home" />
+
+                <!-- DEGRADADO -->
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/card_home_motogp_gradient" />
+
+                <!-- INFORMACIÓN -->
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom"
+                    android:layout_height="match_parent"
+                    android:gravity="bottom"
                     android:orientation="vertical"
-                    android:padding="15dp">
+                    android:padding="20dp">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="PILOTOS"
-                        android:textColor="#FFFFFF"
-                        android:textSize="17sp"
-                        android:textStyle="bold"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Ver parrilla"
-                        android:textColor="#AAAAAA"
-                        android:textSize="12sp"
-                        android:layout_marginTop="3dp"/>
-
-                </LinearLayout>
-
-            </FrameLayout>
-
-
-            <!-- CLASIFICACION -->
-
-            <FrameLayout
-                android:id="@+id/cardClasificacion"
-                android:layout_width="0dp"
-                android:layout_height="165dp"
-                android:layout_marginStart="8dp"
-                android:layout_weight="1"
-                android:background="@drawable/card_deporte"
-                android:clickable="true"
-                android:focusable="true">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom"
-                    android:orientation="vertical"
-                    android:padding="15dp">
-
-                    <TextView
-                        android:layout_width="136dp"
-                        android:layout_height="wrap_content"
-                        android:text="CLASIFICACIÓN"
-                        android:textColor="#FFFFFF"
-                        android:textSize="17sp"
+                        android:letterSpacing="0.12"
+                        android:text="PILOTO DESTACADO"
+                        android:textColor="#BDBDBD"
+                        android:textSize="11sp"
                         android:textStyle="bold" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Top pilotos"
-                        android:textColor="#AAAAAA"
-                        android:textSize="12sp"
-                        android:layout_marginTop="3dp"/>
+                        android:layout_marginTop="3dp"
+                        android:text="MARC"
+                        android:textColor="#FFFFFF"
+                        android:textSize="19sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="MARQUEZ"
+                        android:textColor="#FFFFFF"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="66dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/tag_lenovo"
+                            android:gravity="center"
+                            android:paddingStart="18dp"
+                            android:paddingTop="10dp"
+                            android:paddingEnd="10dp"
+                            android:paddingBottom="10dp"
+                            android:text="Ducati Lenovo Team  •  #2"
+                            android:textColor="#FFFFFF"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
 
                 </LinearLayout>
 
             </FrameLayout>
 
-        </LinearLayout>
 
+            <!-- ================================= -->
+            <!-- ACCESOS -->
+            <!-- ================================= -->
 
-        <!-- ========================= -->
-        <!-- CALENDARIO -->
-        <!-- ========================= -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp"
+                android:letterSpacing="0.08"
+                android:text="EXPLORA MOTO GP"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:textStyle="bold" />
 
-        <FrameLayout
-            android:id="@+id/cardCalendario"
-            android:layout_width="match_parent"
-            android:layout_height="105dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="16dp"
-            android:background="@drawable/card_deporte"
-            android:clickable="true"
-            android:focusable="true">
 
             <LinearLayout
-                android:layout_width="350dp"
-                android:layout_height="76dp"
-                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="28dp"
+                android:gravity="center"
                 android:orientation="horizontal"
-                android:padding="10dp">
+                android:weightSum="3">
+
+
+                <!-- PILOTOS -->
+
+                <LinearLayout
+                    android:id="@+id/menuPilotos"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="82dp"
+                        android:layout_height="82dp"
+                        android:background="@drawable/circle_menu">
+
+                        <ImageView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_gravity="center"
+                            android:contentDescription="Pilotos"
+                            android:src="@drawable/ic_pilotos_motogp" />
+
+                    </FrameLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Pilotos"
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+
+                <!-- CLASIFICACIÓN -->
+
+                <LinearLayout
+                    android:id="@+id/menuClasificacion"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="82dp"
+                        android:layout_height="82dp"
+                        android:background="@drawable/circle_menu">
+
+                        <ImageView
+                            android:layout_width="42dp"
+                            android:layout_height="42dp"
+                            android:layout_gravity="center"
+                            android:contentDescription="Clasificación"
+                            android:src="@drawable/ic_clasificacion" />
+
+                    </FrameLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Clasificación"
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+
+                <!-- ESTADÍSTICAS -->
+
+                <LinearLayout
+                    android:id="@+id/menuEstadisticas"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="82dp"
+                        android:layout_height="82dp"
+                        android:background="@drawable/circle_menu">
+
+                        <ImageView
+                            android:layout_width="42dp"
+                            android:layout_height="42dp"
+                            android:layout_gravity="center"
+                            android:contentDescription="Estadísticas"
+                            android:src="@drawable/ic_estadisticas" />
+
+                    </FrameLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Estadísticas"
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <!-- ================================= -->
+            <!-- CALENDARIO -->
+            <!-- ================================= -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="14dp">
 
                 <TextView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:background="@drawable/circle_button"
-                    android:gravity="center"
-                    android:text="🏁"
-                    android:textSize="27sp" />
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="PRÓXIMAS CARRERAS"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.08"/>
+
+                <TextView
+                    android:id="@+id/homeCalendario"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CALENDARIO"
+                    android:textColor="#999999"
+                    android:textSize="11sp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+            <!-- CARRERA 1 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:orientation="horizontal"
+                android:background="@drawable/calendar_item"
+                android:clipToOutline="true">
+
+                <View
+                    android:layout_width="4dp"
+                    android:layout_height="match_parent"
+                    android:background="#E10600"/>
 
                 <LinearLayout
                     android:layout_width="0dp"
-                    android:layout_height="50dp"
-                    android:layout_marginStart="15dp"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:paddingStart="14dp"
+                    android:paddingEnd="10dp"
+                    android:paddingTop="12dp"
+                    android:paddingBottom="12dp">
 
-                    <TextView
-                        android:layout_width="wrap_content"
+                    <!-- CABECERA DE LA TARJETA -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="CALENDARIO"
-                        android:textColor="#FFFFFF"
-                        android:textSize="17sp"
-                        android:textStyle="bold" />
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
 
-                    <TextView
-                        android:layout_width="wrap_content"
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Próxima carrera"
+                            android:textColor="#999999"
+                            android:textSize="11sp"/>
+
+                        <TextView
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:gravity="center"
+                            android:text="⋮"
+                            android:textColor="#888888"
+                            android:textSize="23sp"
+                            android:clickable="true"
+                            android:focusable="true"/>
+                    </LinearLayout>
+
+                    <!-- FECHA Y HORA -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
-                        android:text="2026 SEASON"
-                        android:textColor="#88888F"
-                        android:textSize="13sp" />
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginTop="2dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="◷"
+                            android:textColor="#FFFFFF"
+                            android:textSize="19sp"
+                            android:layout_marginEnd="8dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="23 OCT - 25 OCT"
+                            android:textColor="#FFFFFF"
+                            android:textSize="12sp"
+                            android:textStyle="bold"/>
+                    </LinearLayout>
+
+                    <!-- SEPARADOR -->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginBottom="12dp"
+                        android:background="#29292F"/>
+
+                    <!-- INFORMACIÓN DE LA CARRERA -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+
+                            <FrameLayout
+                                android:layout_width="30dp"
+                                android:layout_height="25dp"
+                                android:layout_marginEnd="8dp">
+
+                                <!-- BANDERA DEL PAIS -->
+                                <TextView
+                                    android:layout_width="24dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="top|start"
+                                    android:contentDescription="Bandera de Australia"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/flag_australia" />
+
+                                <!-- ICONO SUPERPUESTO -->
+                                <ImageView
+                                    android:layout_width="13dp"
+                                    android:layout_height="13dp"
+                                    android:layout_gravity="bottom|end"
+                                    android:src="@drawable/ic_race_flag"
+                                    android:background="@drawable/circle_white"
+                                    android:padding="2dp"
+                                    android:contentDescription="Icono de carrera"/>
+                            </FrameLayout>
+
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="GRAND PRIX OF AUSTRALIA"
+                                android:textColor="#FFFFFF"
+                                android:textSize="15sp"
+                                android:textStyle="bold"/>
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:text="Phillip Island · Australia"
+                            android:textColor="#999999"
+                            android:textSize="13sp"/>
+                    </LinearLayout>
 
                 </LinearLayout>
-
-                <TextView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:gravity="center|top"
-                    android:text="→"
-                    android:textColor="#FFFFFF"
-                    android:textSize="23sp"
-                    android:textStyle="bold" />
-
             </LinearLayout>
 
-        </FrameLayout>
+            <!-- CARRERA 2 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:orientation="horizontal"
+                android:background="@drawable/calendar_item"
+                android:clipToOutline="true">
 
-    </LinearLayout>
+                <View
+                    android:layout_width="4dp"
+                    android:layout_height="match_parent"
+                    android:background="#E10600"/>
 
-</ScrollView>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingStart="14dp"
+                    android:paddingEnd="10dp"
+                    android:paddingTop="12dp"
+                    android:paddingBottom="12dp">
 
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Próxima carrera"
+                            android:textColor="#999999"
+                            android:textSize="11sp"/>
+
+                        <TextView
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:gravity="center"
+                            android:text="⋮"
+                            android:textColor="#888888"
+                            android:textSize="23sp"
+                            android:clickable="true"
+                            android:focusable="true"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginTop="2dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="◷"
+                            android:textColor="#FFFFFF"
+                            android:textSize="19sp"
+                            android:layout_marginEnd="8dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="30 OCT - 1 NOV"
+                            android:textColor="#FFFFFF"
+                            android:textSize="12sp"
+                            android:textStyle="bold"/>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginBottom="12dp"
+                        android:background="#29292F"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+
+                            <FrameLayout
+                                android:layout_width="30dp"
+                                android:layout_height="25dp"
+                                android:layout_marginEnd="8dp">
+
+                                <!-- BANDERA DEL PAIS -->
+                                <TextView
+                                    android:layout_width="24dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="top|start"
+                                    android:contentDescription="Bandera de Malasia"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/flag_malasia" />
+
+                                <!-- ICONO SUPERPUESTO -->
+                                <ImageView
+                                    android:layout_width="13dp"
+                                    android:layout_height="13dp"
+                                    android:layout_gravity="bottom|end"
+                                    android:src="@drawable/ic_race_flag"
+                                    android:background="@drawable/circle_white"
+                                    android:padding="2dp"
+                                    android:contentDescription="Icono de carrera"/>
+                            </FrameLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="PETRONAS GRAND PRIX OF MALAYSIA"
+                                android:textColor="#FFFFFF"
+                                android:textSize="15sp"
+                                android:textStyle="bold"/>
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:text="Sepang · Malaysia"
+                            android:textColor="#999999"
+                            android:textSize="13sp"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- CARRERA 3 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/calendar_item"
+                android:clipToOutline="true">
+
+                <View
+                    android:layout_width="4dp"
+                    android:layout_height="match_parent"
+                    android:background="#E10600"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingStart="14dp"
+                    android:paddingEnd="10dp"
+                    android:paddingTop="12dp"
+                    android:paddingBottom="12dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Próxima carrera"
+                            android:textColor="#999999"
+                            android:textSize="11sp"/>
+
+                        <TextView
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:gravity="center"
+                            android:text="⋮"
+                            android:textColor="#888888"
+                            android:textSize="23sp"
+                            android:clickable="true"
+                            android:focusable="true"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginTop="2dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="◷"
+                            android:textColor="#FFFFFF"
+                            android:textSize="19sp"
+                            android:layout_marginEnd="8dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="6 NOV - 8 NOV"
+                            android:textColor="#FFFFFF"
+                            android:textSize="12sp"
+                            android:textStyle="bold"/>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginBottom="12dp"
+                        android:background="#29292F"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+
+                            <FrameLayout
+                                android:layout_width="30dp"
+                                android:layout_height="25dp"
+                                android:layout_marginEnd="8dp">
+
+                                <!-- BANDERA DEL PAIS -->
+                                <TextView
+                                    android:layout_width="24dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="top|start"
+                                    android:contentDescription="Bandera de Qatar"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/flag_qatar" />
+
+                                <!-- ICONO SUPERPUESTO -->
+                                <ImageView
+                                    android:layout_width="13dp"
+                                    android:layout_height="13dp"
+                                    android:layout_gravity="bottom|end"
+                                    android:src="@drawable/ic_race_flag"
+                                    android:background="@drawable/circle_white"
+                                    android:padding="2dp"
+                                    android:contentDescription="Icono de carrera"/>
+                            </FrameLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="QATAR AIRWAYS GRAND PRIX OF QATAR"
+                                android:textColor="#FFFFFF"
+                                android:textSize="15sp"
+                                android:textStyle="bold"/>
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:text="Lusail · Qatar"
+                            android:textColor="#999999"
+                            android:textSize="13sp"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+    <!-- ================================= -->
+    <!-- BARRA FIJA ABAJO -->
+    <!-- ================================= -->
+
+    <include
+        layout="@layout/bottom_navigation_motogp"
+        android:layout_width="match_parent"
+        android:layout_height="70dp" />
+
+</LinearLayout>
